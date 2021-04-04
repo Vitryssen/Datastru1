@@ -123,12 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bfs.h" />
     <ClInclude Include="convert.h" />
+    <ClInclude Include="dfs.h" />
+    <ClInclude Include="dijkstra.h" />
     <ClInclude Include="printer.h" />
     <ClInclude Include="reader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bfs.cpp" />
     <ClCompile Include="convert.cpp" />
+    <ClCompile Include="dfs.cpp" />
+    <ClCompile Include="dijkstra.cpp" />
     <ClCompile Include="printer.cpp" />
     <ClCompile Include="reader.cpp" />
     <ClCompile Include="Source.cpp" />
