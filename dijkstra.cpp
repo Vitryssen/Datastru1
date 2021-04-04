@@ -2,7 +2,7 @@
 #include "printer.h"
 int minDistance(std::vector<int> dist, std::vector<bool> sptSet, int size)
 {
-	int min = INT_MAX, min_index;
+	int min = INT_MAX, min_index{};
 	for (int v = 0; v < size; v++)
 		if (sptSet[v] == false && dist[v] <= min)
 			min = dist[v], min_index = v;
