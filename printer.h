@@ -8,5 +8,5 @@
 void printList(adjacency_list_t test);
 void printMatrix(adjacency_list_t test);
 void printPath(std::vector<int> parent, int j);
-void printSolution(std::vector<int> dist, int n, std::vector<int> parent);
+void printSolution(std::vector<int> dist, int n, std::vector<int> parent, int src);
 #endif

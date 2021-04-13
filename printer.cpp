@@ -46,14 +46,14 @@ void printMatrix(adjacency_list_t test) {
 }
 void printPath(std::vector<int> parent, int j)
 {
-	if (parent[j] == -1)
+	const int NOT_VISITED = -1;
+	if (parent[j] == NOT_VISITED)
 		return;
 	printPath(parent, parent[j]);
 	printf("%d ", j);
 }
-void printSolution(std::vector<int> dist, int n, std::vector<int> parent)
+void printSolution(std::vector<int> dist, int n, std::vector<int> parent, int src)
 {
-	int src = 0;
 	printf("Vertex\t\t\t Distance\tPath");
 	for (int i = 1; i < parent.size(); i++)
 	{

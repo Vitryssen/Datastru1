@@ -26,5 +26,5 @@ void dijkstra(std::vector<std::vector<double> > graph, int src, const int size)
 			}
 		}
 	}
-	printSolution(dist, size, parent);
+	printSolution(dist, size, parent, src);
 }

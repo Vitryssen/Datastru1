@@ -11,7 +11,6 @@ int BFS(int start, adjacency_list_t test) {
 	while (!queue.empty())
 	{
 		start = queue.front();
-		//cout << start << " ";
 		queue.pop_front();
 		for (auto j = test.second.begin(); j != test.second.end(); j++) {
 			if (j[0].n1 == start) {

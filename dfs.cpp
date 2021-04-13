@@ -1,5 +1,6 @@
 #include <vector>
 #include "reader.h"
+int const ALL_NODES_VISITED = -1;
 void resetVisited(std::vector<bool>& visited) {
 	for (int i = 0; i < visited.size(); i++) {
 		visited.at(i) = false;
@@ -27,7 +28,7 @@ bool verifyMatrix(adjacency_list_t test, std::vector<std::vector<double>> matrix
 	for (int x = 0; x < test.first.size(); x++) {
 		for (int i = 0; i < test.first.size(); i++) {
 			DFS(i, test.first.size(), visited, matrix);
-			if (allVisited(visited) != -1) {
+			if (allVisited(visited) != ALL_NODES_VISITED) {
 				return false;
 			}
 			resetVisited(visited);
