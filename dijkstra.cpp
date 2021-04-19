@@ -1,3 +1,10 @@
+/*
+2020-04-19
+André Nordlund
+anno1907
+Datastrukturer och algoritmer DT046G
+Labb 1
+*/
 #include <vector>
 #include "printer.h"
 int minDistance(std::vector<int> dist, std::vector<bool> sptSet, int size)

@@ -1,3 +1,10 @@
+/*
+2020-04-19
+André Nordlund
+anno1907
+Datastrukturer och algoritmer DT046G
+Labb 1
+*/
 #include <vector>
 #include "reader.h"
 int const ALL_NODES_VISITED = -1;

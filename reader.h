@@ -1,3 +1,10 @@
+/*
+2020-04-19
+André Nordlund
+anno1907
+Datastrukturer och algoritmer DT046G
+Labb 1
+*/
 #ifndef READER_H
 #define READER_H
 

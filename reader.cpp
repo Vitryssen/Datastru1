@@ -1,5 +1,11 @@
+/*
+2020-04-19
+André Nordlund
+anno1907
+Datastrukturer och algoritmer DT046G
+Labb 1
+*/
 #include "reader.h"
-
 #include<fstream>
 #include<string>
 #include<map>
