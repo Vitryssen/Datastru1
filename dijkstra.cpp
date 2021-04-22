@@ -7,7 +7,7 @@ Labb 1
 */
 #include <vector>
 #include "printer.h"
-int minDistance(std::vector<int> distance, std::vector<bool> visited, int size)
+int minDistance(std::vector<double> distance, std::vector<bool> visited, int size)
 {
 	int min = INT_MAX, min_index{};
 	//Check for reachable and unvisted nodes and return the index of the shortest path
@@ -18,7 +18,7 @@ int minDistance(std::vector<int> distance, std::vector<bool> visited, int size)
 }
 void dijkstra(std::vector<std::vector<double> > matrix, int src, const int size)
 {
-	std::vector<int> distance(size, INT_MAX);
+	std::vector<double> distance(size, INT_MAX);
 	std::vector<bool> visited(size, false);
 	std::vector<int> parent(size, -1);
 	distance[src] = 0;
@@ -37,5 +37,5 @@ void dijkstra(std::vector<std::vector<double> > matrix, int src, const int size)
 			}
 		}
 	}
-	printSolution(distance, size, parent, src);
+	printSolution(distance, parent, src);
 }

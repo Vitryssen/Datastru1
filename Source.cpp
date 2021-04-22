@@ -55,6 +55,6 @@ int main() {
 		}
 	}
 	cout << "BFS valid" << endl;
-	dijkstra(matrix, 20, test.first.size());
+	dijkstra(matrix, 0, test.first.size());
 	return 0;
 }

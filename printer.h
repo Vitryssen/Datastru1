@@ -17,7 +17,7 @@ void printList(adjacency_list_t test);
 //Same as the function above but for a matrix
 void printMatrix(adjacency_list_t test);
 //Recursive function to print djikstra path
-void printPath(std::vector<int> parent, int j);
+void printPath(std::vector<int> parent, int index);
 //Prints the solution to the djikstra algoritm
-void printSolution(std::vector<int> dist, int n, std::vector<int> parent, int src);
+void printSolution(std::vector<double> distance, std::vector<int> parent, int src);
 #endif
