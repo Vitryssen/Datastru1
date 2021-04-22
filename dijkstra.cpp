@@ -7,13 +7,13 @@ Labb 1
 */
 #include <vector>
 #include "printer.h"
-int minDistance(std::vector<int> dist, std::vector<bool> sptSet, int size)
+int minDistance(std::vector<int> distance, std::vector<bool> visited, int size)
 {
 	int min = INT_MAX, min_index{};
 	//Check for reachable and unvisted nodes and return the index of the shortest path
 	for (int v = 0; v < size; v++)
-		if (sptSet[v] == false && dist[v] <= min)
-			min = dist[v], min_index = v;
+		if (visited[v] == false && distance[v] <= min)
+			min = distance[v], min_index = v;
 	return min_index;
 }
 void dijkstra(std::vector<std::vector<double> > matrix, int src, const int size)
