@@ -10,28 +10,32 @@ Labb 1
 int minDistance(std::vector<int> dist, std::vector<bool> sptSet, int size)
 {
 	int min = INT_MAX, min_index{};
+	//Check for reachable and unvisted nodes and return the index of the shortest path
 	for (int v = 0; v < size; v++)
 		if (sptSet[v] == false && dist[v] <= min)
 			min = dist[v], min_index = v;
 	return min_index;
 }
-void dijkstra(std::vector<std::vector<double> > graph, int src, const int size)
+void dijkstra(std::vector<std::vector<double> > matrix, int src, const int size)
 {
-	std::vector<int> dist(size, INT_MAX);
-	std::vector<bool> sptSet(size, false);
+	std::vector<int> distance(size, INT_MAX);
+	std::vector<bool> visited(size, false);
 	std::vector<int> parent(size, -1);
-	dist[src] = 0;
+	distance[src] = 0;
 	for (int count = 0; count < size - 1; count++)
-	{
-		int u = minDistance(dist, sptSet, size);
-		sptSet[u] = true;
+	{	
+		//Get the index of the node with shortest distance
+		int u = minDistance(distance, visited, size);
+		visited[u] = true;
 		for (int v = 0; v < size; v++)
 		{
-			if (!sptSet[v] && graph[u][v] && dist[u] + graph[u][v] < dist[v]) {
+			//If its a valid node add the path to the parent array
+			//and add its distance to the distance array
+			if (!visited[v] && matrix[u][v] && distance[u] + matrix[u][v] < distance[v]) {
 				parent[v] = u;
-				dist[v] = dist[u] + graph[u][v];
+				distance[v] = distance[u] + matrix[u][v];
 			}
 		}
 	}
-	printSolution(dist, size, parent, src);
+	printSolution(distance, size, parent, src);
 }

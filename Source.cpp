@@ -48,6 +48,7 @@ int main() {
 		cout << "DFS not valid" << endl;
 	}
 	for (int i = 0; i < test.first.size(); i++) {
+		//Run bfs from all nodes
 		if (BFS(i, test) != ALL_NODES_VISITED) {
 			cout << "BFS not valid";
 			return 1;
